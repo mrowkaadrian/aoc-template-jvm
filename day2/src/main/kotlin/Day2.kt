@@ -29,6 +29,12 @@ fun part2(): Any {
     return result
 }
 
+private val input: String by lazy {readInput()}
+
+private fun readInput(): String {
+    return object {}.javaClass.getResource("Day1.input").readText()
+}
+
 private fun readFileAsMatrix(fileName: String) : List<List<Int>> {
     val resource = object {}.javaClass.getResource(fileName)
         ?: throw IllegalArgumentException("File $fileName not found in resources.")
